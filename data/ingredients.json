@@ -1,8 +1,8 @@
 {
   "meta": {
-    "opis": "Baza składników z kaloriami wyodrębniona z recipes_100.json",
-    "wersja": "1.0",
-    "data_utworzenia": "2025-06-10"
+    "opis": "Baza składników z kaloriami – wszystkie nazwy i synonimy w liczbie pojedynczej",
+    "wersja": "1.1",
+    "data_utworzenia": "2025-06-11"
   },
   "skladniki": [
     {
@@ -14,16 +14,16 @@
       "jednostka": "sztuka"
     },
     {
-      "nazwa": "banan", 
-      "synonimy": ["banany"],
+      "nazwa": "banan",
+      "synonimy": ["banan"],
       "kalorie_na_100g": 89,
       "kategoria": "owoce",
       "waga_standardowa": 120,
       "jednostka": "sztuka"
     },
     {
-      "nazwa": "brokuły",
-      "synonimy": ["brokuł", "brokuly"],
+      "nazwa": "brokuł",
+      "synonimy": ["brokuł", "brokul"],
       "kalorie_na_100g": 34,
       "kategoria": "warzywa",
       "waga_standardowa": 300,
@@ -31,7 +31,7 @@
     },
     {
       "nazwa": "cebula",
-      "synonimy": ["cebule", "cebulka"],
+      "synonimy": ["cebulka"],
       "kalorie_na_100g": 40,
       "kategoria": "warzywa",
       "waga_standardowa": 150,
@@ -47,15 +47,15 @@
     },
     {
       "nazwa": "cukinia",
-      "synonimy": ["cukinie", "cukinia"],
+      "synonimy": ["cukinia"],
       "kalorie_na_100g": 17,
-      "kategoria": "warzywa", 
+      "kategoria": "warzywa",
       "waga_standardowa": 200,
       "jednostka": "sztuka"
     },
     {
       "nazwa": "cytryna",
-      "synonimy": ["cytryny", "cytrynka"],
+      "synonimy": ["cytrynka"],
       "kalorie_na_100g": 29,
       "kategoria": "owoce",
       "waga_standardowa": 60,
@@ -78,8 +78,8 @@
       "jednostka": "kawałek"
     },
     {
-      "nazwa": "jajka",
-      "synonimy": ["jajko", "jaja"],
+      "nazwa": "jajko",
+      "synonimy": ["jajko"],
       "kalorie_na_100g": 155,
       "kategoria": "białko",
       "waga_standardowa": 60,
@@ -87,14 +87,14 @@
     },
     {
       "nazwa": "jarmuż",
-      "synonimy": ["kale", "jarmuz"],
+      "synonimy": ["jarmuz"],
       "kalorie_na_100g": 49,
       "kategoria": "warzywa",
       "waga_standardowa": 100,
       "jednostka": "garść"
     },
     {
-      "nazwa": "kapary",
+      "nazwa": "kapar",
       "synonimy": ["kapar"],
       "kalorie_na_100g": 23,
       "kategoria": "przyprawy",
@@ -127,7 +127,7 @@
     },
     {
       "nazwa": "marchewka",
-      "synonimy": ["marchewki", "marchew"],
+      "synonimy": ["marchew"],
       "kalorie_na_100g": 41,
       "kategoria": "warzywa",
       "waga_standardowa": 100,
@@ -151,7 +151,7 @@
     },
     {
       "nazwa": "ogórek",
-      "synonimy": ["ogórki", "ogórek świeży"],
+      "synonimy": ["ogórek świeży"],
       "kalorie_na_100g": 16,
       "kategoria": "warzywa",
       "waga_standardowa": 100,
@@ -167,7 +167,7 @@
     },
     {
       "nazwa": "papryka",
-      "synonimy": ["papryki", "czerwona papryka", "żółta papryka"],
+      "synonimy": ["czerwona papryka", "żółta papryka"],
       "kalorie_na_100g": 31,
       "kategoria": "warzywa",
       "waga_standardowa": 150,
@@ -183,7 +183,7 @@
     },
     {
       "nazwa": "pomidor",
-      "synonimy": ["pomidory", "pomidor świeży"],
+      "synonimy": ["pomidor świeży"],
       "kalorie_na_100g": 18,
       "kategoria": "warzywa",
       "waga_standardowa": 150,
@@ -215,7 +215,7 @@
     },
     {
       "nazwa": "słonecznik",
-      "synonimy": ["nasiona słonecznika", "pestki słonecznika"],
+      "synonimy": ["nasiono słonecznika", "pestka słonecznika"],
       "kalorie_na_100g": 584,
       "kategoria": "orzechy",
       "waga_standardowa": 30,
