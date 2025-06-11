@@ -1,0 +1,241 @@
+{
+  "meta": {
+    "opis": "Baza składników z kaloriami wyodrębniona z recipes_100.json",
+    "wersja": "1.0",
+    "data_utworzenia": "2025-06-10"
+  },
+  "skladniki": [
+    {
+      "nazwa": "awokado",
+      "synonimy": ["awokado"],
+      "kalorie_na_100g": 160,
+      "kategoria": "owoce",
+      "waga_standardowa": 200,
+      "jednostka": "sztuka"
+    },
+    {
+      "nazwa": "banan", 
+      "synonimy": ["banany"],
+      "kalorie_na_100g": 89,
+      "kategoria": "owoce",
+      "waga_standardowa": 120,
+      "jednostka": "sztuka"
+    },
+    {
+      "nazwa": "brokuły",
+      "synonimy": ["brokuł", "brokuly"],
+      "kalorie_na_100g": 34,
+      "kategoria": "warzywa",
+      "waga_standardowa": 300,
+      "jednostka": "główka"
+    },
+    {
+      "nazwa": "cebula",
+      "synonimy": ["cebule", "cebulka"],
+      "kalorie_na_100g": 40,
+      "kategoria": "warzywa",
+      "waga_standardowa": 150,
+      "jednostka": "sztuka"
+    },
+    {
+      "nazwa": "chleb razowy",
+      "synonimy": ["chleb", "pieczywo razowe"],
+      "kalorie_na_100g": 247,
+      "kategoria": "zboza",
+      "waga_standardowa": 30,
+      "jednostka": "kromka"
+    },
+    {
+      "nazwa": "cukinia",
+      "synonimy": ["cukinie", "cukinia"],
+      "kalorie_na_100g": 17,
+      "kategoria": "warzywa", 
+      "waga_standardowa": 200,
+      "jednostka": "sztuka"
+    },
+    {
+      "nazwa": "cytryna",
+      "synonimy": ["cytryny", "cytrynka"],
+      "kalorie_na_100g": 29,
+      "kategoria": "owoce",
+      "waga_standardowa": 60,
+      "jednostka": "sztuka"
+    },
+    {
+      "nazwa": "czosnek",
+      "synonimy": ["czosnku", "ząbek czosnku"],
+      "kalorie_na_100g": 149,
+      "kategoria": "warzywa",
+      "waga_standardowa": 3,
+      "jednostka": "ząbek"
+    },
+    {
+      "nazwa": "imbir",
+      "synonimy": ["korzeń imbiru", "świeży imbir"],
+      "kalorie_na_100g": 80,
+      "kategoria": "przyprawy",
+      "waga_standardowa": 10,
+      "jednostka": "kawałek"
+    },
+    {
+      "nazwa": "jajka",
+      "synonimy": ["jajko", "jaja"],
+      "kalorie_na_100g": 155,
+      "kategoria": "białko",
+      "waga_standardowa": 60,
+      "jednostka": "sztuka"
+    },
+    {
+      "nazwa": "jarmuż",
+      "synonimy": ["kale", "jarmuz"],
+      "kalorie_na_100g": 49,
+      "kategoria": "warzywa",
+      "waga_standardowa": 100,
+      "jednostka": "garść"
+    },
+    {
+      "nazwa": "kapary",
+      "synonimy": ["kapar"],
+      "kalorie_na_100g": 23,
+      "kategoria": "przyprawy",
+      "waga_standardowa": 20,
+      "jednostka": "łyżka"
+    },
+    {
+      "nazwa": "kasza",
+      "synonimy": ["kasza gryczana", "gryka"],
+      "kalorie_na_100g": 343,
+      "kategoria": "zboza",
+      "waga_standardowa": 80,
+      "jednostka": "szklanka"
+    },
+    {
+      "nazwa": "koperek",
+      "synonimy": ["świeży koperek", "zielony koperek"],
+      "kalorie_na_100g": 43,
+      "kategoria": "zioła",
+      "waga_standardowa": 10,
+      "jednostka": "garść"
+    },
+    {
+      "nazwa": "kurczak",
+      "synonimy": ["pierś kurczaka", "filet kurczaka"],
+      "kalorie_na_100g": 165,
+      "kategoria": "białko",
+      "waga_standardowa": 150,
+      "jednostka": "filet"
+    },
+    {
+      "nazwa": "marchewka",
+      "synonimy": ["marchewki", "marchew"],
+      "kalorie_na_100g": 41,
+      "kategoria": "warzywa",
+      "waga_standardowa": 100,
+      "jednostka": "sztuka"
+    },
+    {
+      "nazwa": "mleko roślinne",
+      "synonimy": ["mleko migdałowe", "mleko owsiane", "mleko sojowe"],
+      "kalorie_na_100g": 50,
+      "kategoria": "napoje",
+      "waga_standardowa": 250,
+      "jednostka": "szklanka"
+    },
+    {
+      "nazwa": "ocet",
+      "synonimy": ["ocet winny", "ocet jabłkowy"],
+      "kalorie_na_100g": 18,
+      "kategoria": "przyprawy",
+      "waga_standardowa": 15,
+      "jednostka": "łyżka"
+    },
+    {
+      "nazwa": "ogórek",
+      "synonimy": ["ogórki", "ogórek świeży"],
+      "kalorie_na_100g": 16,
+      "kategoria": "warzywa",
+      "waga_standardowa": 100,
+      "jednostka": "sztuka"
+    },
+    {
+      "nazwa": "oliwa",
+      "synonimy": ["oliwa z oliwek", "olej oliwkowy"],
+      "kalorie_na_100g": 884,
+      "kategoria": "tłuszcze",
+      "waga_standardowa": 10,
+      "jednostka": "łyżka"
+    },
+    {
+      "nazwa": "papryka",
+      "synonimy": ["papryki", "czerwona papryka", "żółta papryka"],
+      "kalorie_na_100g": 31,
+      "kategoria": "warzywa",
+      "waga_standardowa": 150,
+      "jednostka": "sztuka"
+    },
+    {
+      "nazwa": "pieprz",
+      "synonimy": ["czarny pieprz", "pieprz mielony"],
+      "kalorie_na_100g": 251,
+      "kategoria": "przyprawy",
+      "waga_standardowa": 1,
+      "jednostka": "szczypta"
+    },
+    {
+      "nazwa": "pomidor",
+      "synonimy": ["pomidory", "pomidor świeży"],
+      "kalorie_na_100g": 18,
+      "kategoria": "warzywa",
+      "waga_standardowa": 150,
+      "jednostka": "sztuka"
+    },
+    {
+      "nazwa": "soczewica",
+      "synonimy": ["soczewica czerwona", "soczewica zielona"],
+      "kalorie_na_100g": 353,
+      "kategoria": "białko",
+      "waga_standardowa": 200,
+      "jednostka": "szklanka"
+    },
+    {
+      "nazwa": "sos sojowy",
+      "synonimy": ["soja", "sos soja"],
+      "kalorie_na_100g": 60,
+      "kategoria": "przyprawy",
+      "waga_standardowa": 15,
+      "jednostka": "łyżka"
+    },
+    {
+      "nazwa": "szpinak",
+      "synonimy": ["świeży szpinak", "młody szpinak"],
+      "kalorie_na_100g": 23,
+      "kategoria": "warzywa",
+      "waga_standardowa": 100,
+      "jednostka": "garść"
+    },
+    {
+      "nazwa": "słonecznik",
+      "synonimy": ["nasiona słonecznika", "pestki słonecznika"],
+      "kalorie_na_100g": 584,
+      "kategoria": "orzechy",
+      "waga_standardowa": 30,
+      "jednostka": "garść"
+    },
+    {
+      "nazwa": "tofu",
+      "synonimy": ["ser sojowy", "tofu naturalne"],
+      "kalorie_na_100g": 76,
+      "kategoria": "białko",
+      "waga_standardowa": 100,
+      "jednostka": "kostka"
+    },
+    {
+      "nazwa": "łosoś",
+      "synonimy": ["filet łososia", "łosoś świeży"],
+      "kalorie_na_100g": 208,
+      "kategoria": "białko",
+      "waga_standardowa": 150,
+      "jednostka": "filet"
+    }
+  ]
+}
