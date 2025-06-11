@@ -10,6 +10,7 @@ from utils import (
     get_missing_ingredients
 )
 from vector_store import init_vector_store, query_similar_recipes
+from utils import _ingredient_iter, normalize
 
 # --- Configuration & Secrets ---
 st.set_page_config(
@@ -29,10 +30,36 @@ ing_lookup, all_ingredients = build_ingredient_lookup(ingredients_data)
 # --- Initialize vector store ---
 embed_model, embed_index = init_vector_store(recipes)
 
+# --- Context retrieval for chat ---
+def retrieve_context(user_msg):
+    user_msg = normalize(user_msg)
+    context = ""
+    seen = set()
+    for r in recipes:
+        for ing in _ingredient_iter(r):
+            if ing in user_msg and r['title'] not in seen:
+                context += f"Przepis: {r['title']}\nSkładniki: {r['ingredients']}\nKategoria: {r['category']}\n\n"
+                seen.add(r['title'])
+                break
+        if len(seen) >= 5:
+            break
+    return context.strip()
+
 # --- OpenAI chat helper ---
 client = OpenAI(api_key=API_KEY, base_url="https://openrouter.ai/api/v1")
-def ai_chat(messages: list) -> str:
+def ai_chat(messages: list, user_msg: str = "") -> str:
     try:
+        context = retrieve_context(user_msg)
+        if context:
+            messages = messages.copy()
+            messages.insert(1, {
+                "role": "system",
+                "content": (
+                    "Oto kilka przepisów, które mogą pomóc użytkownikowi:\n" +
+                    context +
+                    "\nW odpowiedzi wykorzystaj powyższe dane, jeśli pasują."
+                )
+            })
         resp = client.chat.completions.create(
             model="meta-llama/llama-4-maverick:free",
             messages=messages
@@ -59,32 +86,26 @@ st.title("🍲 Twój kuchenny asystent AI 2.0")
 recipes_tab, chat_tab = st.tabs(["🔍 Przepisy", "💬 Chat"])
 
 def clean_unicode(text):
-    # usuń znaki spoza rozsądnego zakresu (czyli np. dziwne symbole)
     return re.sub(r'[^\x00-\xFFąćęłńóśźżĄĆĘŁŃÓŚŹŻ\s\w.,:;!?()\'\"%-]', '', text)
 
 # --- Przepisy Tab ---
 with recipes_tab:
-    # Sidebar options
     st.sidebar.header("Ustawienia przepisów")
     diet = st.sidebar.selectbox(
         "Wybierz dietę", 
         ["dowolna", "wege", "keto", "niskotłuszczowa", "niskocukrowa"]
     )
-    have = st.sidebar.multiselect(
-        "Składniki, które masz", 
-        options=all_ingredients
-    )
+    have = st.sidebar.multiselect("Składniki, które masz", options=all_ingredients)
+    
     if st.sidebar.button("Szukaj przepisów"):
         if not have:
             st.sidebar.warning("Wybierz przynajmniej jeden składnik.")
         else:
-            # 1. Dokładne dopasowania
             exact = get_available_recipes(have, recipes, diet)
             if exact:
                 st.subheader("Przepisy pasujące do Twoich składników")
                 seen = set()
                 for r in exact:
-                    # usuń numer z tytułu
                     title = re.sub(r"\s+\d+$", "", r['title'])
                     if title in seen:
                         continue
@@ -96,8 +117,6 @@ with recipes_tab:
                         st.markdown(instr)
             else:
                 st.warning("Brak dokładnych dopasowań.")
-
-            # 2. Częściowe dopasowania (maks. 2 brakujące)
             partial = get_missing_ingredients(have, recipes, diet)
             if partial:
                 st.subheader("Przepisy z brakującymi składnikami")
@@ -113,8 +132,6 @@ with recipes_tab:
                         st.write(f"**Brakuje:** {', '.join(missing)}")
                         instr = generate_instructions(title, r['ingredients'])
                         st.markdown(instr)
-
-            # 3. Sugestie AI: 3 różne kategorie
             st.divider()
             st.subheader("Sugestie AI")
             sims = query_similar_recipes(
@@ -143,27 +160,21 @@ with recipes_tab:
 
 # --- Chat Tab ---
 with chat_tab:
-    # Inicjalizacja historii
     if 'chat_history' not in st.session_state:
         st.session_state.chat_history = [
             {"role": "system", "content": (
-                "Jesteś pomocnym kuchennym asystentem AI."
-                "Odpowiadaj po Polsku i używaj sensownych słów"
-                "Unikaj wszelkich dziwnych znaków, emotek, alfabetów innych niż łaciński."
-                "Na końcu podawaj ile ma kalorii dany przepis."
-
+                "Jesteś pomocnym kuchennym asystentem AI. "
+                "Odpowiadaj po Polsku i używaj sensownych słów. "
+                "Unikaj dziwnych znaków, emotek i alfabetów innych niż łaciński."
+                "Zawsze podawaj informacje o kaloriach w przepisach."
             )}
         ]
-
-    # Pole do wpisania nowej wiadomości na samym dole
     user_msg = st.chat_input("Napisz do asystenta...")
     if user_msg:
         st.session_state.chat_history.append({"role": "user", "content": user_msg})
-        reply = ai_chat(st.session_state.chat_history)
-        reply = clean_unicode(reply)
+        reply = ai_chat(st.session_state.chat_history, user_msg=user_msg)
         st.session_state.chat_history.append({"role": "assistant", "content": reply})
 
-    # Wyświetl historię odwróconą – najnowsze u góry
     history = st.session_state.chat_history[1:]
     for msg in reversed(history):
         with st.chat_message(msg['role']):
