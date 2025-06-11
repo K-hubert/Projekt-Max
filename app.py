@@ -2,7 +2,6 @@ import streamlit as st
 import re
 from openai import OpenAI
 from functools import lru_cache
-
 from utils import (
     load_json,
     build_ingredient_lookup,
@@ -35,7 +34,7 @@ client = OpenAI(api_key=API_KEY, base_url="https://openrouter.ai/api/v1")
 def ai_chat(messages: list) -> str:
     try:
         resp = client.chat.completions.create(
-            model="mistralai/devstral-small:free",
+            model="meta-llama/llama-4-maverick:free",
             messages=messages
         )
         return resp.choices[0].message.content.strip()
@@ -58,6 +57,10 @@ def generate_instructions(title: str, ingredients: str) -> str:
 # --- UI Layout ---
 st.title("🍲 Twój kuchenny asystent AI 2.0")
 recipes_tab, chat_tab = st.tabs(["🔍 Przepisy", "💬 Chat"])
+
+def clean_unicode(text):
+    # usuń znaki spoza rozsądnego zakresu (czyli np. dziwne symbole)
+    return re.sub(r'[^\x00-\xFFąćęłńóśźżĄĆĘŁŃÓŚŹŻ\s\w.,:;!?()\'\"%-]', '', text)
 
 # --- Przepisy Tab ---
 with recipes_tab:
@@ -144,6 +147,9 @@ with chat_tab:
         st.session_state.chat_history = [
             {"role": "system", "content": (
                 "Jesteś pomocnym kuchennym asystentem AI."
+                "Odpowiadaj po Polsku i używaj sensownych słów"
+                "Unikaj wszelkich dziwnych znaków, emotek, alfabetów innych niż łaciński."
+
             )}
         ]
     # Display chat history
@@ -156,5 +162,6 @@ with chat_tab:
         st.chat_message("user").markdown(user_msg)
         st.session_state.chat_history.append({"role":"user","content":user_msg})
         reply = ai_chat(st.session_state.chat_history)
+        reply = clean_unicode(reply)
         st.session_state.chat_history.append({"role":"assistant","content":reply})
         st.chat_message("assistant").markdown(reply)

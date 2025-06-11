@@ -1,6 +1,10 @@
 import faiss
 from sentence_transformers import SentenceTransformer
 import streamlit as st
+import unicodedata
+
+def fix_encoding(text):
+    return unicodedata.normalize("NFKC", text)
 
 @st.cache_resource(show_spinner=False)
 def init_vector_store(recipes: list):
