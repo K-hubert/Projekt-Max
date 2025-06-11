@@ -1,0 +1,12 @@
+# Ignoruj środowisko wirtualne
+venv/
+
+# Ignoruj ustawienia Streamlit
+.streamlit/secrets.toml
+
+# Ignoruj dane lokalne
+data/
+
+# Inne potencjalne pliki do ignorowania
+*.pyc
+__pycache__/
