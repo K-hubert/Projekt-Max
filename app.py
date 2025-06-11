@@ -159,6 +159,7 @@ with chat_tab:
     if user_msg:
         st.session_state.chat_history.append({"role": "user", "content": user_msg})
         reply = ai_chat(st.session_state.chat_history)
+        reply = clean_unicode(reply)
         st.session_state.chat_history.append({"role": "assistant", "content": reply})
 
     # Wyświetl historię odwróconą – najnowsze u góry
