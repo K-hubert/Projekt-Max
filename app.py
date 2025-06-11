@@ -150,6 +150,7 @@ with chat_tab:
                 "Jesteś pomocnym kuchennym asystentem AI."
                 "Odpowiadaj po Polsku i używaj sensownych słów"
                 "Unikaj wszelkich dziwnych znaków, emotek, alfabetów innych niż łaciński."
+                "Na końcu podawaj ile ma kalorii dany przepis."
 
             )}
         ]
