@@ -143,6 +143,7 @@ with recipes_tab:
 
 # --- Chat Tab ---
 with chat_tab:
+    # Inicjalizacja historii
     if 'chat_history' not in st.session_state:
         st.session_state.chat_history = [
             {"role": "system", "content": (
@@ -152,16 +153,16 @@ with chat_tab:
 
             )}
         ]
-    # Display chat history
-    for msg in st.session_state.chat_history[1:]:
-        with st.chat_message(msg['role']):
-            st.markdown(msg['content'])
-    # User input
+
+    # Pole do wpisania nowej wiadomości na samym dole
     user_msg = st.chat_input("Napisz do asystenta...")
     if user_msg:
-        st.chat_message("user").markdown(user_msg)
-        st.session_state.chat_history.append({"role":"user","content":user_msg})
+        st.session_state.chat_history.append({"role": "user", "content": user_msg})
         reply = ai_chat(st.session_state.chat_history)
-        reply = clean_unicode(reply)
-        st.session_state.chat_history.append({"role":"assistant","content":reply})
-        st.chat_message("assistant").markdown(reply)
+        st.session_state.chat_history.append({"role": "assistant", "content": reply})
+
+    # Wyświetl historię odwróconą – najnowsze u góry
+    history = st.session_state.chat_history[1:]
+    for msg in reversed(history):
+        with st.chat_message(msg['role']):
+            st.markdown(msg['content'])
