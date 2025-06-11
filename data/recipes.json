@@ -1,17 +1,17 @@
 [
   {
     "title": "Smoothie z awokado",
-    "ingredients": "awokado, czosnek, jajka, banan",
-    "category": "niskocukrowa"
+    "ingredients": "awokado, banan, mleko roślinne, szpinak",
+    "category": "wege"
   },
   {
     "title": "Sałatka z awokado",
-    "ingredients": "awokado, marchewka, brokuły, cytryna",
-    "category": "keto"
+    "ingredients": "awokado, pomidor, oliwa, słonecznik",
+    "category": "niskotłuszczowa"
   },
   {
     "title": "Koktajl bananowy",
-    "ingredients": "banan, koperek, soczewica, kapary",
+    "ingredients": "banan, mleko roślinne, awokado, imbir",
     "category": "wege"
   },
   {
@@ -20,23 +20,23 @@
     "category": "wege"
   },
   {
-    "title": "Brokuły na parze",
-    "ingredients": "brokuły, czosnek, oliwa, pieprz",
+    "title": "Brokuł na parze",
+    "ingredients": "brokuł, czosnek, oliwa, pieprz",
     "category": "niskocukrowa"
   },
   {
-    "title": "Zapiekanka z brokułami",
-    "ingredients": "brokuły, pieprz, cukinia, tofu",
-    "category": "niskocukrowa"
+    "title": "Zapiekanka z brokułem",
+    "ingredients": "brokuł, cukinia, papryka, tofu",
+    "category": "wege"
   },
   {
     "title": "Konfitura z cebuli",
-    "ingredients": "cebula, cytryna, oliwa, papryka",
-    "category": "niskocukrowa"
+    "ingredients": "cebula, cytryna, oliwa, pieprz",
+    "category": "wege"
   },
   {
     "title": "Zupa cebulowa",
-    "ingredients": "cebula, jarmuż, cytryna, szpinak",
+    "ingredients": "cebula, jarmuż, czosnek, szpinak",
     "category": "wege"
   },
   {
@@ -45,7 +45,7 @@
     "category": "wege"
   },
   {
-    "title": "Grzanki razowe",
+    "title": "Grzanka czosnkowa",
     "ingredients": "chleb razowy, czosnek, oliwa, papryka",
     "category": "wege"
   },
@@ -55,7 +55,7 @@
     "category": "wege"
   },
   {
-    "title": "Zupa krem z cukinii",
+    "title": "Krem z cukinii",
     "ingredients": "cukinia, cebula, mleko roślinne, koperek",
     "category": "niskotłuszczowa"
   },
@@ -65,13 +65,13 @@
     "category": "niskotłuszczowa"
   },
   {
-    "title": "Lemoniada cytrynowa",
+    "title": "Lemoniada imbirowo-cytrynowa",
     "ingredients": "cytryna, imbir, ocet, miód",
     "category": "wege"
   },
   {
-    "title": "Grzanki czosnkowe",
-    "ingredients": "czosnek, chleb razowy, oliwa, pieprz",
+    "title": "Grzanka czosnkowa z pomidorem",
+    "ingredients": "czosnek, pomidor, chleb razowy, oliwa",
     "category": "wege"
   },
   {
@@ -90,13 +90,13 @@
     "category": "wege"
   },
   {
-    "title": "Jajecznica",
-    "ingredients": "jajka, cebula, papryka, pieprz",
+    "title": "Jajecznica klasyczna",
+    "ingredients": "jajko, cebula, papryka, pieprz",
     "category": "niskocukrowa"
   },
   {
     "title": "Omlet warzywny",
-    "ingredients": "jajka, pomidor, cebula, cukinia",
+    "ingredients": "jajko, pomidor, cukinia, cebula",
     "category": "niskocukrowa"
   },
   {
@@ -105,18 +105,18 @@
     "category": "niskotłuszczowa"
   },
   {
-    "title": "Chipsy z jarmużu",
+    "title": "Chips z jarmużu",
     "ingredients": "jarmuż, oliwa, pieprz, czosnek",
     "category": "niskotłuszczowa"
   },
   {
     "title": "Pasta z kaparami",
-    "ingredients": "kapary, ogórek, oliwa, cebula",
+    "ingredients": "kapar, ogórek, cebula, oliwa",
     "category": "keto"
   },
   {
     "title": "Sałatka z kaparami",
-    "ingredients": "kapary, pomidor, ogórek, koperek",
+    "ingredients": "kapar, ogórek, pomidor, koperek",
     "category": "keto"
   },
   {
@@ -125,8 +125,8 @@
     "category": "wege"
   },
   {
-    "title": "Kasza z grzybami",
-    "ingredients": "kasza, pieprz, cebula, oliwa",
+    "title": "Kasza z grzybem",
+    "ingredients": "kasza, cebula, pieprz, oliwa",
     "category": "wege"
   },
   {
@@ -135,12 +135,12 @@
     "category": "niskotłuszczowa"
   },
   {
-    "title": "Ziemniaki z koperkiem",
-    "ingredients": "koperek, oliwa, pieprz, ziemniaki",
+    "title": "Ziemniak z koperkiem",
+    "ingredients": "ziemniak, koperek, oliwa, pieprz",
     "category": "wege"
   },
   {
-    "title": "Kurczak z warzywami",
+    "title": "Kurczak w warzywach",
     "ingredients": "kurczak, papryka, cebula, sos sojowy",
     "category": "niskocukrowa"
   },
@@ -156,7 +156,7 @@
   },
   {
     "title": "Surówka z marchewki",
-    "ingredients": "marchewka, ocet, cytryna, koperek",
+    "ingredients": "marchewka, cytryna, ocet, koperek",
     "category": "wege"
   },
   {
@@ -165,7 +165,7 @@
     "category": "wege"
   },
   {
-    "title": "Pudding z mleka roślinnego",
+    "title": "Pudding roślinny",
     "ingredients": "mleko roślinne, kakao, banan, słonecznik",
     "category": "wege"
   },
@@ -191,12 +191,12 @@
   },
   {
     "title": "Dressing oliwny",
-    "ingredients": "oliwa, czosnek, cytryna, pieprz",
+    "ingredients": "oliwa, cytryna, czosnek, pieprz",
     "category": "niskotłuszczowa"
   },
   {
     "title": "Humus z oliwą",
-    "ingredients": "oliwa, czosnek, soczewica, papryka",
+    "ingredients": "soczewica, oliwa, czosnek, papryka",
     "category": "wege"
   },
   {
@@ -215,8 +215,8 @@
     "category": "wege"
   },
   {
-    "title": "Stek z pieprzem",
-    "ingredients": "pieprz, kurczak, oliwa, czosnek",
+    "title": "Kurczak pieczony z pieprzem",
+    "ingredients": "kurczak, pieprz, oliwa, czosnek",
     "category": "keto"
   },
   {
@@ -236,12 +236,12 @@
   },
   {
     "title": "Dal z soczewicy",
-    "ingredients": "soczewica, imbir, czosnek, papryka",
+    "ingredients": "soczewica, czosnek, imbir, papryka",
     "category": "wege"
   },
   {
-    "title": "Stir-fry z sosem sojowym",
-    "ingredients": "sos sojowy, tofu, papryka, cebula",
+    "title": "Stir-fry z tofu i sosem sojowym",
+    "ingredients": "tofu, papryka, cebula, sos sojowy",
     "category": "wege"
   },
   {
@@ -250,23 +250,23 @@
     "category": "keto"
   },
   {
-    "title": "Sałatka ze szpinakiem",
+    "title": "Sałatka szpinakowa",
     "ingredients": "szpinak, awokado, pomidor, oliwa",
     "category": "wege"
   },
   {
     "title": "Tarta ze szpinakiem",
-    "ingredients": "szpinak, jajka, cebula, oliwa",
+    "ingredients": "szpinak, jajko, cebula, oliwa",
     "category": "niskocukrowa"
   },
   {
-    "title": "Prażone pestki słonecznika",
+    "title": "Prażone nasiono słonecznika",
     "ingredients": "słonecznik, oliwa, pieprz, czosnek",
     "category": "niskotłuszczowa"
   },
   {
     "title": "Chleb ze słonecznikiem",
-    "ingredients": "słonecznik, chleb razowy, oliwa, pieprz",
+    "ingredients": "chleb razowy, słonecznik, oliwa, pieprz",
     "category": "wege"
   },
   {
@@ -275,8 +275,8 @@
     "category": "wege"
   },
   {
-    "title": "Tofu w sosie teriyaki",
-    "ingredients": "tofu, imbir, czosnek, sos sojowy",
+    "title": "Tofu w teriyaki",
+    "ingredients": "tofu, czosnek, imbir, sos sojowy",
     "category": "wege"
   },
   {
@@ -286,287 +286,262 @@
   },
   {
     "title": "Tatar z łososia",
-    "ingredients": "łosoś, ogórek, kapary, cebula",
+    "ingredients": "łosoś, ogórek, kapar, cebula",
     "category": "keto"
   },
   {
-    "title": "Proste awokado",
-    "ingredients": "awokado, pieprz, oliwa, cytryna",
+    "title": "Awokado z oliwą",
+    "ingredients": "awokado, cytryna, oliwa, pieprz",
     "category": "keto"
   },
   {
-    "title": "Classic banan fusion",
-    "ingredients": "banan, mleko roślinne, awokado, imbir",
+    "title": "Bananowe smoothie z tofu",
+    "ingredients": "banan, mleko roślinne, tofu, szpinak",
     "category": "wege"
   },
   {
-    "title": "Wiosenne brokuły deluxe",
-    "ingredients": "brokuły, marchewka, oliwa, pieprz",
+    "title": "Brokuł z marchewką",
+    "ingredients": "brokuł, marchewka, oliwa, pieprz",
     "category": "wege"
   },
   {
-    "title": "Chrupiąca cebula extra",
-    "ingredients": "cebula, pieprz, oliwa, papryka",
+    "title": "Cebula smażona z papryką",
+    "ingredients": "cebula, papryka, oliwa, pieprz",
     "category": "wege"
   },
   {
-    "title": "Letnia cukinia mix",
+    "title": "Cukiniowy stir-fry",
     "ingredients": "cukinia, pomidor, czosnek, oliwa",
     "category": "wege"
   },
   {
-    "title": "Śródziemnomorska cytryna",
-    "ingredients": "cytryna, oliwa, czosnek, koperek",
+    "title": "Cytrynowa salsa",
+    "ingredients": "cytryna, cebula, koperek, oliwa",
     "category": "niskotłuszczowa"
   },
   {
-    "title": "Pikantny czosnek plus",
-    "ingredients": "czosnek, papryka, ocet, oliwa",
+    "title": "Czosnek marynowany",
+    "ingredients": "czosnek, ocet, pieprz, oliwa",
     "category": "wege"
   },
   {
-    "title": "Delikatny imbir",
-    "ingredients": "imbir, cytryna, ogórek, ocet",
+    "title": "Imbirowy chłodnik ogórkowy",
+    "ingredients": "imbir, ogórek, cytryna, woda",
     "category": "niskotłuszczowa"
   },
   {
-    "title": "Chrupiący omlet",
-    "ingredients": "jajka, papryka, cebula, pomidor",
+    "title": "Omlet wiosenny",
+    "ingredients": "jajko, papryka, cebula, pomidor",
     "category": "niskocukrowa"
   },
   {
-    "title": "Zielony jarmuż fusion",
-    "ingredients": "jarmuż, szpinak, czosnek, oliwa",
+    "title": "Krem z jarmużu",
+    "ingredients": "jarmuż, cebula, czosnek, oliwa",
     "category": "niskotłuszczowa"
   },
   {
-    "title": "Proste kapary",
-    "ingredients": "kapary, ogórek, oliwa, pieprz",
+    "title": "Kapary z ogórkiem",
+    "ingredients": "kapar, ogórek, oliwa, pieprz",
     "category": "keto"
   },
   {
-    "title": "Pikantna kasza",
+    "title": "Kasza pikantna",
     "ingredients": "kasza, papryka, cebula, pieprz",
     "category": "wege"
   },
   {
-    "title": "Classic koperek plus",
-    "ingredients": "koperek, cytryna, oliwa, pieprz",
-    "category": "niskotłuszczowa"
+    "title": "Ziemniak pieczony z koperkiem",
+    "ingredients": "ziemniak, koperek, oliwa, pieprz",
+    "category": "wege"
   },
   {
-    "title": "Szybki kurczak",
-    "ingredients": "kurczak, brokuły, sos sojowy, czosnek",
+    "title": "Kurczak z brokułem",
+    "ingredients": "kurczak, brokuł, czosnek, sos sojowy",
     "category": "niskocukrowa"
   },
   {
-    "title": "Delikatna marchewka",
-    "ingredients": "marchewka, cytryna, oliwa, pieprz",
+    "title": "Marchewkowy krem",
+    "ingredients": "marchewka, cebula, czosnek, oliwa",
     "category": "wege"
   },
   {
-    "title": "Kremowe mleko roślinne mix",
-    "ingredients": "mleko roślinne, banan, kakao, słonecznik",
+    "title": "Kakao na mleku roślinnym",
+    "ingredients": "mleko roślinne, kakao, banan, słonecznik",
     "category": "wege"
   },
   {
-    "title": "Pikantny ocet fusion",
-    "ingredients": "ocet, czosnek, pieprz, oliwa",
+    "title": "Ocet ziołowy",
+    "ingredients": "ocet, koperek, czosnek, pieprz",
     "category": "keto"
   },
   {
-    "title": "Letni ogórek",
-    "ingredients": "ogórek, cebula, koperek, ocet",
+    "title": "Ogórek z koperkiem",
+    "ingredients": "ogórek, koperek, ocet, oliwa",
     "category": "niskotłuszczowa"
   },
   {
-    "title": "Classic oliwa deluxe",
-    "ingredients": "oliwa, czosnek, cytryna, pieprz",
-    "category": "niskotłuszczowa"
-  },
-  {
-    "title": "Wiosenna papryka",
-    "ingredients": "papryka, cukinia, cebula, oliwa",
-    "category": "wege"
-  },
-  {
-    "title": "Prosty pieprz mix",
-    "ingredients": "pieprz, oliwa, ocet, czosnek",
-    "category": "wege"
-  },
-  {
-    "title": "Chrupiący pomidor",
-    "ingredients": "pomidor, cebula, czosnek, papryka",
-    "category": "wege"
-  },
-  {
-    "title": "Kremowa soczewica",
-    "ingredients": "soczewica, marchewka, cebula, czosnek",
-    "category": "wege"
-  },
-  {
-    "title": "Śródziemnomorski sos sojowy",
-    "ingredients": "sos sojowy, tofu, papryka, cebula",
-    "category": "wege"
-  },
-  {
-    "title": "Delikatny szpinak",
-    "ingredients": "szpinak, awokado, pomidor, oliwa",
-    "category": "wege"
-  },
-  {
-    "title": "Classic słonecznik plus",
-    "ingredients": "słonecznik, oliwa, pieprz, czosnek",
-    "category": "niskotłuszczowa"
-  },
-  {
-    "title": "Śródziemnomorskie tofu",
-    "ingredients": "tofu, papryka, sos sojowy, imbir",
-    "category": "wege"
-  },
-  {
-    "title": "Pikantny łosoś extra",
-    "ingredients": "łosoś, cytryna, koperek, pieprz",
-    "category": "niskotłuszczowa"
-  },
-  {
-    "title": "Prosta pasta z awokado",
-    "ingredients": "awokado, czosnek, oliwa, cytryna",
-    "category": "keto"
-  },
-  {
-    "title": "Kremowy koktajl bananowy",
-    "ingredients": "banan, mleko roślinne, szpinak, tofu",
-    "category": "wege"
-  },
-  {
-    "title": "Chrupiące brokuły fusion",
-    "ingredients": "brokuły, oliwa, czosnek, pieprz",
-    "category": "wege"
-  },
-  {
-    "title": "Classic cebula mix",
-    "ingredients": "cebula, ocet, oliwa, pieprz",
-    "category": "wege"
-  },
-  {
-    "title": "Letnia cukinia deluxe",
-    "ingredients": "cukinia, pomidor, cebula, oliwa",
-    "category": "wege"
-  },
-  {
-    "title": "Pikantna cytryna",
-    "ingredients": "cytryna, ocet, pieprz, czosnek",
-    "category": "niskotłuszczowa"
-  },
-  {
-    "title": "Szybki czosnek",
-    "ingredients": "czosnek, papryka, oliwa, pieprz",
-    "category": "wege"
-  },
-  {
-    "title": "Chrupiący imbir",
-    "ingredients": "imbir, ogórek, cytryna, ocet",
-    "category": "niskotłuszczowa"
-  },
-  {
-    "title": "Wiosenne jajka",
-    "ingredients": "jajka, szpinak, cebula, papryka",
-    "category": "niskocukrowa"
-  },
-  {
-    "title": "Letni jarmuż",
-    "ingredients": "jarmuż, pomidor, oliwa, czosnek",
-    "category": "niskotłuszczowa"
-  },
-  {
-    "title": "Delikatne kapary",
-    "ingredients": "kapary, ogórek, oliwa, pieprz",
-    "category": "keto"
-  },
-  {
-    "title": "Prosta kasza",
-    "ingredients": "kasza, cebula, papryka, oliwa",
-    "category": "wege"
-  },
-  {
-    "title": "Classic koperek fusion",
-    "ingredients": "koperek, cytryna, oliwa, pieprz",
-    "category": "niskotłuszczowa"
-  },
-  {
-    "title": "Chrupiący kurczak",
-    "ingredients": "kurczak, czosnek, papryka, sos sojowy",
-    "category": "niskocukrowa"
-  },
-  {
-    "title": "Wiosenna marchewka",
-    "ingredients": "marchewka, cytryna, oliwa, pieprz",
-    "category": "wege"
-  },
-  {
-    "title": "Kremowe mleko roślinne deluxe",
-    "ingredients": "mleko roślinne, banan, kakao, słonecznik",
-    "category": "wege"
-  },
-  {
-    "title": "Pikantny ocet deluxe",
-    "ingredients": "ocet, czosnek, pieprz, oliwa",
-    "category": "keto"
-  },
-  {
-    "title": "Śródziemnomorski ogórek",
-    "ingredients": "ogórek, koperek, cebula, ocet",
-    "category": "niskotłuszczowa"
-  },
-  {
-    "title": "Classic oliwa",
+    "title": "Oliwa czosnkowa",
     "ingredients": "oliwa, czosnek, pieprz, cytryna",
     "category": "niskotłuszczowa"
   },
   {
-    "title": "Letnia papryka fusion",
-    "ingredients": "papryka, cukinia, cebula, oliwa",
+    "title": "Papryka grillowana",
+    "ingredients": "papryka, cebula, oliwa, pieprz",
     "category": "wege"
   },
   {
-    "title": "Delikatny pieprz",
-    "ingredients": "pieprz, czosnek, oliwa, ocet",
+    "title": "Pieprzowy dip",
+    "ingredients": "pieprz, jogurt roślinny, czosnek, oliwa",
     "category": "wege"
   },
   {
-    "title": "Wiosenny pomidor",
-    "ingredients": "pomidor, cebula, czosnek, papryka",
+    "title": "Pomidor z cebulą",
+    "ingredients": "pomidor, cebula, oliwa, pieprz",
     "category": "wege"
   },
   {
-    "title": "Kremowa soczewica deluxe",
-    "ingredients": "soczewica, marchewka, cebula, czosnek",
+    "title": "Soczewicowe curry",
+    "ingredients": "soczewica, cebula, czosnek, papryka",
     "category": "wege"
   },
   {
-    "title": "Prosty sos sojowy",
-    "ingredients": "sos sojowy, tofu, papryka, cebula",
+    "title": "Warzywa w sosie sojowym",
+    "ingredients": "papryka, cebula, sos sojowy, brokuł",
     "category": "wege"
   },
   {
-    "title": "Delikatny szpinak plus",
+    "title": "Szpinak z awokado",
     "ingredients": "szpinak, awokado, pomidor, oliwa",
     "category": "wege"
   },
   {
-    "title": "Chrupiący słonecznik fusion",
-    "ingredients": "słonecznik, pieprz, oliwa, czosnek",
-    "category": "niskotłuszczowa"
-  },
-  {
-    "title": "Śródziemnomorskie tofu deluxe",
-    "ingredients": "tofu, papryka, sos sojowy, imbir",
+    "title": "Słonecznikowa granola",
+    "ingredients": "słonecznik, banan, mleko roślinne, kakao",
     "category": "wege"
   },
   {
-    "title": "Letni łosoś",
-    "ingredients": "łosoś, cytryna, koperek, pieprz",
+    "title": "Tofu grillowane z warzywami",
+    "ingredients": "tofu, papryka, cukinia, sos sojowy",
+    "category": "wege"
+  },
+  {
+    "title": "Łosoś cytrynowy",
+    "ingredients": "łosoś, cytryna, pieprz, oliwa",
+    "category": "niskotłuszczowa"
+  },
+  {
+    "title": "Awokado nadziewane",
+    "ingredients": "awokado, pomidor, cebula, koperek",
+    "category": "keto"
+  },
+  {
+    "title": "Bananowy chlebek",
+    "ingredients": "banan, chleb razowy, mleko roślinne, słonecznik",
+    "category": "wege"
+  },
+  {
+    "title": "Brokuł z czosnkiem",
+    "ingredients": "brokuł, czosnek, oliwa, pieprz",
+    "category": "wege"
+  },
+  {
+    "title": "Cebulowa salsa",
+    "ingredients": "cebula, pomidor, papryka, pieprz",
+    "category": "wege"
+  },
+  {
+    "title": "Cukinia w pomidorze",
+    "ingredients": "cukinia, pomidor, czosnek, oliwa",
+    "category": "wege"
+  },
+  {
+    "title": "Cytrynowy dressing",
+    "ingredients": "cytryna, oliwa, ocet, pieprz",
+    "category": "niskotłuszczowa"
+  },
+  {
+    "title": "Czosnkowy hummus",
+    "ingredients": "soczewica, czosnek, oliwa, pieprz",
+    "category": "wege"
+  },
+  {
+    "title": "Imbirowa sałatka owocowa",
+    "ingredients": "imbir, banan, awokado, cytryna",
+    "category": "wege"
+  },
+  {
+    "title": "Jajko po benedyktyńsku",
+    "ingredients": "jajko, ocet, szpinak, chleb razowy",
+    "category": "niskocukrowa"
+  },
+  {
+    "title": "Zupa jarmużowa",
+    "ingredients": "jarmuż, marchewka, cebula, oliwa",
+    "category": "niskotłuszczowa"
+  },
+  {
+    "title": "Kapary w oliwie",
+    "ingredients": "kapar, oliwa, pieprz, czosnek",
+    "category": "keto"
+  },
+  {
+    "title": "Kasza zapiekana",
+    "ingredients": "kasza, cebula, oliwa, pomidor",
+    "category": "wege"
+  },
+  {
+    "title": "Kurczak w marynacie sojowej",
+    "ingredients": "kurczak, sos sojowy, imbir, czosnek",
+    "category": "niskocukrowa"
+  },
+  {
+    "title": "Marchewkowa surówka z koperkiem",
+    "ingredients": "marchewka, koperek, cytryna, oliwa",
+    "category": "wege"
+  },
+  {
+    "title": "Kakaowe smoothie",
+    "ingredients": "mleko roślinne, kakao, banan, imbir",
+    "category": "wege"
+  },
+  {
+    "title": "Ogórek kiszony domowy",
+    "ingredients": "ogórek, czosnek, koperek, sól",
+    "category": "niskotłuszczowa"
+  },
+  {
+    "title": "Oliwa ziołowa",
+    "ingredients": "oliwa, koperek, czosnek, pieprz",
+    "category": "niskotłuszczowa"
+  },
+  {
+    "title": "Papryka w sosie pomidorowym",
+    "ingredients": "papryka, pomidor, cebula, oliwa",
+    "category": "wege"
+  },
+  {
+    "title": "Pieprz cytrynowy domowy",
+    "ingredients": "pieprz, cytryna, sól, oliwa",
+    "category": "wege"
+  },
+  {
+    "title": "Pomidorowa bruschetta",
+    "ingredients": "pomidor, czosnek, chleb razowy, oliwa",
+    "category": "wege"
+  },
+  {
+    "title": "Soczewicowy pasztet",
+    "ingredients": "soczewica, marchewka, cebula, pieprz",
+    "category": "wege"
+  },
+  {
+    "title": "Tofu w sosie chili",
+    "ingredients": "tofu, papryka, cebula, pieprz",
+    "category": "wege"
+  },
+  {
+    "title": "Łosoś grillowany",
+    "ingredients": "łosoś, oliwa, pieprz, cytryna",
     "category": "niskotłuszczowa"
   }
 ]
