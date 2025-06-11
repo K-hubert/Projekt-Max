@@ -146,22 +146,15 @@ with chat_tab:
             {"role": "system", "content": "Jesteś pomocnym kuchennym asystentem AI."}
         ]
 
-    # Wyświetl historię (bez pierwszego systemowego wpisu), odwróconą kolejnością
+    # Pole do wpisania nowej wiadomości na samym dole
+    user_msg = st.chat_input("Napisz do asystenta...")
+    if user_msg:
+        st.session_state.chat_history.append({"role": "user", "content": user_msg})
+        reply = ai_chat(st.session_state.chat_history)
+        st.session_state.chat_history.append({"role": "assistant", "content": reply})
+
+    # Wyświetl historię odwróconą – najnowsze u góry
     history = st.session_state.chat_history[1:]
     for msg in reversed(history):
         with st.chat_message(msg['role']):
             st.markdown(msg['content'])
-
-    # Pole do wpisania nowej wiadomości
-    user_msg = st.chat_input("Napisz do asystenta...")
-    if user_msg:
-        # Dodaj i wyświetl wiadomość użytkownika
-        st.chat_message("user").markdown(user_msg)
-        st.session_state.chat_history.append({"role": "user", "content": user_msg})
-
-        # Wywołanie AI i zapis odpowiedzi
-        reply = ai_chat(st.session_state.chat_history)
-        st.session_state.chat_history.append({"role": "assistant", "content": reply})
-
-        # Wyświetl odpowiedź asystenta
-        st.chat_message("assistant").markdown(reply)

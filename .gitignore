@@ -2,7 +2,7 @@
 venv/
 
 # Ignoruj ustawienia Streamlit
-.streamlit/secrets.toml
+.streamlit
 
 # Ignoruj dane lokalne
 data/
