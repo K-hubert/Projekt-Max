@@ -1,3 +1,4 @@
+#Importy
 from vector_store import init_vector_store, query_similar_recipes
 import streamlit as st
 import re
@@ -12,9 +13,9 @@ from utils import (
     _ingredient_iter,
     normalize
 )
-from vector_store import init_vector_store, query_similar_recipes
 
-# --- Configuration & Secrets ---
+# Konfiguracja strony Streamlit
+# Ustawienia strony, tytuł, ikona i układ
 st.set_page_config(
     page_title="Kuchenny RAG 2.0",
     page_icon="🍽️",
@@ -25,21 +26,23 @@ API_KEY = st.secrets.get("OPENROUTER_API_KEY")
 if not API_KEY:
     st.error("Brak klucza API. Dodaj OPENROUTER_API_KEY do sekcji secrets.toml.")
 
-# --- Load data ---
 
+#Wczytywanie danych z plików JSON
 recipes = load_json("data/recipes.json")  
 ingredients_data = load_json("data/ingredients.json")  # <- pełny słownik 
 
-# ingredients_data is dict with key "skladniki"
+#Składniki
 ingredients_list = ingredients_data.get("skladniki", [])
 
-# Build lookup for calories and synonyms
+#Lookup kalorii i składników
 ing_lookup, all_ingredients = build_ingredient_lookup(ingredients_data)
 
-# Initialize vector store for similarity search (RAG)
+#Inicjalizacja wektoryzacji przepisów
 embed_model, embed_index = init_vector_store(recipes)
 
-# --- Helper to retrieve context for RAG ---
+
+
+#RAG
 def retrieve_context(user_msg):
     user_msg = normalize(user_msg)
     context = ""
@@ -55,7 +58,9 @@ def retrieve_context(user_msg):
             break
     return context.strip()
 
-# --- OpenAI chat helper ---
+
+
+#AI klient OpenAI
 client = OpenAI(api_key=API_KEY, base_url="https://openrouter.ai/api/v1")
 
 def ai_chat(messages: list, user_msg: str = "") -> str:
@@ -71,6 +76,7 @@ def ai_chat(messages: list, user_msg: str = "") -> str:
                     "\nW odpowiedzi wykorzystaj powyższe dane, jeśli pasują."
                 )
             })
+        #Model z OpenRouter
         resp = client.chat.completions.create(
             model="meta-llama/llama-4-maverick:free",
             messages=messages
@@ -80,12 +86,10 @@ def ai_chat(messages: list, user_msg: str = "") -> str:
         st.error(f"Błąd API: {e}")
         return "[błąd generowania]"
 
-# --- Instruction generation with caching ---
+#Generowanie instrukcji dla pojedynczego przepisu
+#Użycie cache do przechowywania wyników
 @lru_cache(maxsize=64)
 def generate_instructions(title: str, ingredients: str) -> str:
-    """
-    Generate short step-by-step instructions for one recipe using AI.
-    """
     prompt = [
         {"role": "system", "content": "Jesteś asystentem kulinarnym podającym zwięzłe instrukcje."},
         {"role": "user", "content": (
@@ -95,13 +99,8 @@ def generate_instructions(title: str, ingredients: str) -> str:
     ]
     return ai_chat(prompt)
 
-#--- Instruction generation for mealplan(7 days)
+#Generowanie instrukcji dla wielu przepisów z cache
 def generate_instructions_bulk_cached(recipes_list):
-    """
-    Generate instructions for multiple recipes with caching, batched call to AI.
-    recipes_list: list of dicts with keys "title" and "ingredients"
-    Returns: list of instructions in the same order
-    """
     if 'instructions_cache' not in st.session_state:
         st.session_state.instructions_cache = {}
 
@@ -151,18 +150,17 @@ def generate_instructions_bulk_cached(recipes_list):
     return [instr for _, instr in all_results]
 
 
-# --- Calories filtering for mealplan ---
+#Filtrowanie Kalorii
+#Filtruje posiłki aby mieściły się w zakresie min-Max
 def filter_meals_by_kcal(meals, kcal_min, kcal_max, meals_per_day):
-    """
-    Filter meals so that daily kcal sum fits in kcal_min..kcal_max.
-    Simple heuristic: each meal kcal <= max kcal per meal (kcal_max/meals_per_day).
-    """
+    
     max_kcal_per_meal = kcal_max // meals_per_day
     filtered = [m for m in meals if m['kcal'] <= max_kcal_per_meal]
     return filtered
 
 
-# --- UI Layout ---
+
+#UI
 
 st.title("🍲 Twój kuchenny asystent AI 2.0")
 
@@ -243,7 +241,9 @@ with recipes_tab:
                 if count >= 3:
                     break
 
-# --- Chat tab ---
+
+
+#Chat Tab
 with chat_tab:
     if 'chat_history' not in st.session_state:
         st.session_state.chat_history = [
@@ -265,7 +265,7 @@ with chat_tab:
         with st.chat_message(msg['role']):
             st.markdown(msg['content'])
 
-# --- Mealplan tab ---
+#Mealplan Tab
 with mealplan_tab:
     st.header("📅 Twój tygodniowy jadłospis AI")
 
@@ -288,14 +288,14 @@ with mealplan_tab:
         if not have_plan:
             st.warning("Wybierz przynajmniej jeden składnik.")
         else:
-            # Get exact meals (RAG)
+            # RAG posiłków
             available_meals = get_available_recipes(have_plan, recipes, diet_plan)
-            # Get fallback meals with missing ingredients
+            # Posiłki z częścią składników
             fallback_meals = get_missing_ingredients(have_plan, recipes, diet_plan)
 
             combined_meals = available_meals + [r for r, _ in fallback_meals]
 
-            # Calculate kcal for each meal
+            # Kalkulator kalorii każdego dnia
             for m in combined_meals:
                 m['kcal'] = calculate_calories(m['ingredients'], ing_lookup)
 
@@ -304,7 +304,7 @@ with mealplan_tab:
                 st.warning("Brak przepisów mieszczących się w podanym zakresie kalorii.")
             else:
                 st.success(f"Znaleziono {len(filtered_meals)} posiłków mieszczących się w zakresie kalorii.")
-                # mealplan for 7 days * meals_per_day
+                # mealplan na 7 dni * meals_per_day
                 plan = []
                 idx = 0
                 total_needed = 7 * meals_per_day
@@ -315,7 +315,7 @@ with mealplan_tab:
                 instructions_list = generate_instructions_bulk_cached(plan)
 
                 
-                # show mealplan
+                #Pokazanie planu posiłków
                 for day in range(7):
                     with st.expander(f"🗓️ Dzień {day + 1}"):
                         for meal_num in range(meals_per_day):
