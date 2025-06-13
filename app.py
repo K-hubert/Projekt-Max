@@ -130,11 +130,11 @@ def generate_instructions_bulk_cached(recipes_list):
         ]
 
         response = ai_chat(prompt)
-        # Split by numbered list "1.", "2.", etc.
+        # Rozdziela wygenerowaną odpowiedź na osobne instrukcje
         instructions = re.split(r"\n\d+\.\s", "\n" + response)
         instructions = [instr.strip() for instr in instructions if instr.strip()]
 
-        # Pad or trim instructions to match requested recipes count
+        # Czyści każdą instrukcję z białych znaków
         while len(instructions) < len(to_request):
             instructions.append("Brak instrukcji — wygeneruj ręcznie.")
         if len(instructions) > len(to_request):
