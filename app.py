@@ -171,7 +171,7 @@ tabs = st.tabs(["🔍 Przepisy", "💬 Chat", "📅 Jadłospis"])
 
 recipes_tab, chat_tab, mealplan_tab = tabs
 
-# --- Przepisy Tab ---
+#Przepisy Tab
 with recipes_tab:
     st.sidebar.header("Ustawienia przepisów")
     diet = st.sidebar.selectbox(
