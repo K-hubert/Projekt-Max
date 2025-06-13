@@ -7,9 +7,10 @@ import unicodedata
 def fix_encoding(text):
     return unicodedata.normalize("NFKC", text)
 
-@st.cache_resource(show_spinner=False)
 
 #Przechowywanie wyników w pamięci
+@st.cache_resource(show_spinner=False)
+
 def init_vector_store(recipes: list): 
     
     model = SentenceTransformer('all-MiniLM-L6-v2') #Zmiana na vektory
