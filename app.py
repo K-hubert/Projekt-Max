@@ -1,5 +1,5 @@
 #Importy
-from vector_store import init_vector_store, query_similar_recipes
+from vector_store import init_vector_store, query_similar_recipes, get_rag_context
 import streamlit as st
 import re
 from openai import OpenAI
@@ -65,7 +65,7 @@ client = OpenAI(api_key=API_KEY, base_url="https://openrouter.ai/api/v1")
 
 def ai_chat(messages: list, user_msg: str = "") -> str:
     try:
-        context = retrieve_context(user_msg)
+        context = get_rag_context(user_msg, recipes, embed_model, embed_index)
         if context:
             messages = messages.copy()
             messages.insert(1, {
