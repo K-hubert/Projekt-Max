@@ -90,6 +90,9 @@ def ai_chat(messages: list, user_msg: str = "") -> str:
 #Użycie cache do przechowywania wyników
 @lru_cache(maxsize=64)
 def generate_instructions(title: str, ingredients: str) -> str:
+    """
+    Generate short step-by-step instructions for one recipe using AI.
+    """
     prompt = [
         {"role": "system", "content": "Jesteś asystentem kulinarnym podającym zwięzłe instrukcje."},
         {"role": "user", "content": (
