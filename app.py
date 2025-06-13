@@ -29,7 +29,7 @@ if not API_KEY:
 
 #Wczytywanie danych z plików JSON
 recipes = load_json("data/recipes.json")  
-ingredients_data = load_json("data/ingredients.json")  # <- pełny słownik 
+ingredients_data = load_json("data/ingredients.json")  #pełny słownik 
 
 #Składniki
 ingredients_list = ingredients_data.get("skladniki", [])
@@ -90,9 +90,7 @@ def ai_chat(messages: list, user_msg: str = "") -> str:
 #Użycie cache do przechowywania wyników
 @lru_cache(maxsize=64)
 def generate_instructions(title: str, ingredients: str) -> str:
-    """
-    Generate short step-by-step instructions for one recipe using AI.
-    """
+    
     prompt = [
         {"role": "system", "content": "Jesteś asystentem kulinarnym podającym zwięzłe instrukcje."},
         {"role": "user", "content": (
