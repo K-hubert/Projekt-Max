@@ -43,19 +43,18 @@ embed_model, embed_index = init_vector_store(recipes)
 
 
 #RAG
-def retrieve_context(user_msg):
-    user_msg = normalize(user_msg)
+def retrieve_context(user_msg, top_k=5):
+    similar = query_similar_recipes(
+        query=user_msg,
+        recipes=recipes,
+        model=embed_model,
+        index=embed_index,
+        top_k=top_k
+    )
+
     context = ""
-    seen = set()
-    for r in recipes:
-        for ing in _ingredient_iter(r):
-            if ing in user_msg and r['title'] not in seen:
-                context += f"Przepis: {r['title']}\nSkładniki: {r['ingredients']}\nKategoria: {r['category']}\n\n"
-                seen.add(r['title'])
-                if len(seen) >= 5:
-                    break
-        if len(seen) >= 5:
-            break
+    for r in similar:
+        context += f"Przepis: {r['title']}\nSkładniki: {r['ingredients']}\nKategoria: {r['category']}\n\n"
     return context.strip()
 
 
